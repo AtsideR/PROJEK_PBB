@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="1400dp"
             android:layout_height="64dp"
-            android:src="@drawable/Xporteer"/>
+            android:src="@drawable/xporteer"/>
 
         <ImageView
             android:layout_width="160dp"

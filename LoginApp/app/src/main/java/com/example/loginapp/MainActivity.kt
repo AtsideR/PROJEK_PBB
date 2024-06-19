@@ -1,9 +1,11 @@
 package com.example.loginapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -28,6 +30,17 @@ class MainActivity : AppCompatActivity() {
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
             Log.i("Test Credentials", "username : $username and password : $password")
+
+                if (username == "admin" && password == "admin123") {
+                    Toast.makeText(this, "Login Successful Welcome $username", Toast.LENGTH_SHORT).show()
+                    // TODO: Navigate to next screen
+                    val intent = Intent(this, homepage::class.java)
+                    startActivity(intent)
+                    finish() // Optional: close the login activity so user can't go back to it
+
+                } else {
+                    Toast.makeText(this, "Invalid Username or Password", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
