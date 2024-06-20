@@ -89,7 +89,7 @@
                     android:layout_height="74dp">
 
                     <ImageView
-                        android:id="@+id/ri6nn4pbaz6s"
+                        android:id="@+id/seaBtn"
                         android:layout_width="74dp"
                         android:layout_height="74dp"
                         android:scaleType="fitXY"
@@ -102,12 +102,13 @@
                         android:paddingHorizontal="13dp">
 
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/sea_btn"
                             android:layout_width="46dp"
                             android:layout_height="46dp"
                             android:layout_marginTop="12dp"
                             android:scaleType="fitXY"
+                            android:background="@drawable/circle"
                             android:src="@drawable/kapal" />
                     </LinearLayout>
 
@@ -136,12 +137,13 @@
                         android:orientation="vertical"
                         android:paddingHorizontal="13dp">
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/air_btn"
                             android:layout_width="46dp"
                             android:layout_height="46dp"
                             android:layout_marginTop="12dp"
                             android:scaleType="fitXY"
+                            android:background="@drawable/circle"
                             android:src="@drawable/pesawat" />
                     </LinearLayout>
                 </RelativeLayout>
@@ -169,13 +171,14 @@
                         android:orientation="vertical"
                         android:paddingHorizontal="13dp">
 
-                        <ImageView
-                            android:id="@+id/packet_btn"
+                        <ImageButton
+                            android:id="@+id/truck_btn"
                             android:layout_width="46dp"
-                            android:layout_height="46dp"
+                            android:layout_height="45dp"
                             android:layout_marginTop="12dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/box" />
+                            android:background="@drawable/circle"
+                            android:src="@drawable/truck" />
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
@@ -211,7 +214,7 @@
                     android:id="@+id/rh3v6sd9ata"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="X-Packet"
+                    android:text="X-Truck"
                     android:textColor="#000000"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -277,11 +280,11 @@
                         android:paddingHorizontal="13dp">
 
                         <LinearLayout
-                            android:id="@+id/truck_btn"
+                            android:id="@+id/packet_btn"
                             android:layout_width="46dp"
-                            android:layout_height="45dp"
+                            android:layout_height="46dp"
                             android:layout_marginTop="12dp"
-                            android:background="@drawable/truck"
+                            android:background="@drawable/box"
                             android:orientation="vertical"></LinearLayout>
                     </LinearLayout>
                 </RelativeLayout>
@@ -331,7 +334,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="77dp"
+                    android:layout_marginEnd="72dp"
                     android:text="X-Doc"
                     android:textColor="#000000"
                     android:textSize="18sp" />
@@ -339,8 +342,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="64dp"
-                    android:text="X-Truck"
+                    android:layout_marginEnd="60dp"
+                    android:text="X-Packet"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -357,7 +360,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/r8xkbxnln86b"
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="240dp"
             android:layout_marginHorizontal="63dp"
             android:layout_marginBottom="10dp"
 

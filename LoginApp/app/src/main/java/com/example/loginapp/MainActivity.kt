@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val password = passwordInput.text.toString()
             Log.i("Test Credentials", "username : $username and password : $password")
 
-                if (username == "admin" && password == "admin123") {
+                if (username == "username" && password == "username123") {
                     Toast.makeText(this, "Login Successful Welcome $username", Toast.LENGTH_SHORT).show()
                     // TODO: Navigate to next screen
                     val intent = Intent(this, homepage::class.java)
