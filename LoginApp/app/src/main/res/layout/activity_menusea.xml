@@ -50,10 +50,11 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/inputasal"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/kotak"
-                android:hint="Tuliskan lokasi"
+                android:hint="Tuliskan Lokasi"
                 android:inputType="text"
                 android:padding="10dp"
                 android:textColor="#329D9C"
@@ -68,10 +69,11 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/inputtujuan"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/kotak"
-                android:hint="Tuliskan lokasi"
+                android:hint="Tuliskan Lokasi"
                 android:inputType="text"
                 android:padding="10dp"
                 android:textColor="#329D9C"
@@ -83,20 +85,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Berat Paket"
+                android:text="Berat Paket(kg)"
                 android:textColor="#329D9C"
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/inputberat"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/kotak"
-                android:hint="Tuliskan lokasi"
-                android:inputType="text"
+                android:hint="Berat Paket"
+                android:inputType="number"
                 android:padding="10dp"
                 android:textColor="#329D9C"
                 android:textColorHint="#329D9C"
-                android:textSize="12sp"></EditText>
+                android:textSize="12sp">
+            </EditText>
 
         </LinearLayout>
 
@@ -120,7 +124,7 @@
                     android:backgroundTint="#329D9C" />
 
                 <Button
-                    android:id="@+id/nextBtn"
+                    android:id="@+id/nextsea"
                     android:layout_width="7dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,6 +17,7 @@ class homepage : AppCompatActivity() {
     lateinit var seaBtn : ImageButton
     lateinit var airBtn : ImageButton
     lateinit var truckBtn : ImageButton
+    lateinit var username : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +27,12 @@ class homepage : AppCompatActivity() {
         seaBtn = findViewById(R.id.sea_btn)
         airBtn = findViewById(R.id.air_btn)
         truckBtn = findViewById(R.id.truck_btn)
+        username = findViewById(R.id.username_input)
+
+        val inputnama = intent.getStringExtra("username")
+
+        username.text = inputnama
+
 
         seaBtn.setOnClickListener {
             val intent = Intent(this, menusea::class.java)

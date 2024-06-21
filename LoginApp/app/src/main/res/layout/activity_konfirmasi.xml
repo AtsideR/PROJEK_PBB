@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="7dp"
-                android:text="Menu X-Truck"
+                android:text=""
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
         </RelativeLayout>
@@ -42,64 +42,93 @@
             android:paddingVertical="6dp"
             android:paddingRight="13dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Negara Asal"
-                android:textColor="#329D9C"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/inputasal"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/kotak"
-                android:hint="Tuliskan Lokasi"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#329D9C"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/negaraasal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint=""
                 android:inputType="text"
-                android:padding="10dp"
+                android:padding="4dp"
                 android:textColor="#329D9C"
                 android:textColorHint="#329D9C"
-                android:textSize="12sp"></EditText>
+                android:textSize="16sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#329D9C"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/polygon_3" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Negara tujuan"
-                android:textColor="#329D9C"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/inputtujuan"
+                android:id="@+id/negaratujuan"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/kotak"
-                android:hint="Tuliskan Lokasi"
+                android:layout_height="50dp"
+                android:hint=""
                 android:inputType="text"
-                android:padding="10dp"
+                android:padding="4dp"
                 android:textColor="#329D9C"
                 android:textColorHint="#329D9C"
-                android:textSize="12sp">
-
-            </EditText>
+                android:textSize="16sp">
+            </TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Berat Paket(kg)"
+                android:text="Paket Terkonfirmasi"
+                android:layout_gravity="center"
                 android:textColor="#329D9C"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
 
-            <EditText
-                android:id="@+id/inputberat"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/kotak"
-                android:hint="Berat Paket"
-                android:inputType="number"
-                android:padding="10dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terima Kasih"
+                android:layout_gravity="center"
                 android:textColor="#329D9C"
-                android:textColorHint="#329D9C"
-                android:textSize="12sp"></EditText>
+                android:textSize="23sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telah menggunakan layanan kami"
+                android:layout_gravity="center"
+                android:textColor="#329D9C"
+                android:textSize="23sp" />
+
+            <Button
+                android:id="@+id/end_btn"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#329D9C"
+                android:text="Selesai" />
 
         </LinearLayout>
 
@@ -112,23 +141,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/backTruck"
-                    android:layout_width="7dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="160dp"
-                    android:layout_weight="1"
-                    android:text="Kembali"
-                    android:backgroundTint="#329D9C" />
-
-                <Button
-                    android:id="@+id/nexttruck"
-                    android:layout_width="7dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Lanjut"
-                    android:backgroundTint="#329D9C"/>
 
             </LinearLayout>
         </LinearLayout>

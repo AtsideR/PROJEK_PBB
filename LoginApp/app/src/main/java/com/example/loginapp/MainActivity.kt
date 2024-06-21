@@ -31,10 +31,12 @@ class MainActivity : AppCompatActivity() {
             val password = passwordInput.text.toString()
             Log.i("Test Credentials", "username : $username and password : $password")
 
-                if (username == "username" && password == "username123") {
+                if (password == "$username.123") {
                     Toast.makeText(this, "Login Successful Welcome $username", Toast.LENGTH_SHORT).show()
-                    // TODO: Navigate to next screen
-                    val intent = Intent(this, homepage::class.java)
+                    val nama = usernameInput.text.toString()
+                    val intent = Intent(this, homepage::class.java).apply {
+                        putExtra("username", nama)
+                    }
                     startActivity(intent)
                     finish() // Optional: close the login activity so user can't go back to it
 

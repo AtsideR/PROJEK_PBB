@@ -7,12 +7,17 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class menuair : AppCompatActivity() {
 
     lateinit var backBtn : Button
+    lateinit var nextBtn : Button
+    lateinit var Asal : EditText
+    lateinit var Tujuan : EditText
+    lateinit var Berat : EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,11 +25,32 @@ class menuair : AppCompatActivity() {
         setContentView(R.layout.activity_menuair)
 
         backBtn = findViewById(R.id.backAir)
+        nextBtn = findViewById(R.id.nextair)
+        Asal = findViewById(R.id.inputasal)
+        Tujuan = findViewById(R.id.inputtujuan)
+        Berat = findViewById(R.id.inputberat)
 
         backBtn.setOnClickListener {
             val intent = Intent(this, homepage::class.java)
             startActivity(intent)
             finish()
+        }
+        nextBtn.setOnClickListener {
+            val inputAsal = Asal.text.toString()
+            val inputTujuan = Tujuan.text.toString()
+            val hitung = Berat.text.toString()
+            if (hitung.isNotEmpty() && hitung.all { it.isDigit() }) {
+                val angkabayar = hitung.toInt()
+                val intent = Intent(this, menustrukair::class.java).apply {
+                    putExtra("angka hitung", angkabayar)
+                    putExtra("negara asal", inputAsal)
+                    putExtra("negara tujuan", inputTujuan)
+                }
+                startActivity(intent)
+                finish()
+            }else{
+                Toast.makeText(this, "masukkan data", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
